@@ -1,3 +1,11 @@
+<script
+var statusMsg = "Password Protected Area"
+function GateKeeper() {
+    var password = prompt("Password required:", "");
+    if (password) { top.rightframe.location.href = password + ".html"; }}
+ 
+ //--></SCRIPT>
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,20 +14,26 @@
     <title>Gate Keeper</title>
 </head>
 <body>
-   <div>
-   <h2>Gate Keeper</h2>
-        <form action="gatekeeper.php" method="post">
-        <label>User ID</label>
-        <input type="text" name="UserID"><br><br>
-        <label>Username</label>
-        <input type="text" name="Username"><br><br>
-        <label>Password</label>
-        <input type="text" name="Password"><br><br>
+  
 
-        <input class="submit" name="submit" type="submit" value="Submit">
+    <A HREF="javascript:{;}" onClick="GateKeeper(); return false">Click here</A> for secret website!  
+    <NOSCRIPT><FONT COLOR="#FF0000"><BR>Javascript is required to access this area. Yours seems to be disabled.</FONT></NOSCRIPT>  
 
-            
-        </form>
-   </div>
+        <div>
+            <h2>Gate Keeper</h2>
+                 <form action="gatekeeper.php" method="post">
+                 <label>User ID</label>
+                 <input type="text" name="UserID"><br><br>
+                 <label>Username</label>
+                 <input type="text" name="Username"><br><br>
+                 <label class="col-md-4 control-label">Password</label>
+                 <div class="col-md-6">
+                 <input id="password-field" type="password" class="form-control" name="password" value="secret">
+                 <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                 <input class="submit" name="submit" type="submit" value="Submit">
+         
+                     
+                 </form>
+            </div>
 </body>
 </html>
